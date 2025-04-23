@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;700&family=Ubuntu:wght@300;400;700&display=swap');
+
+:root {
+  --backgroundColor: #94e2d7;
+  --foregroundColor: #000000;
+
+  --primaryColor: #fdce94;
+  --primaryShade1: #fce3e1;
+  --primaryShade2: #f9d7d6;
+  --primaryShade3: #dcaba9;
+  --primaryShade4: #c69594;
+  --primaryShade5: #0277bd;
+
+  --secondaryColor: #a2e2a6;
+  --secondaryShade1: #6a9978;
+  --secondaryShade2: #c5e1a5;
+  --secondaryShade3: #aed581;
+  --secondaryShade4: #689f38;
+  --secondaryShade5: #558b2f;
+
+  --accentColor: #d8e798;
+  --accentShade1: #e0f2f1;
+  --accentShade2: #b2dfdb;
+  --accentShade3: #4db6ac;
+  --accentShade4: #00796b;
+  --accentShade5: #004d40;
+
+  --neutralShade1: #000000;
+  --neutralShade2: #e8e9e9;
+  --neutralShade3: #d1d3d4;
+  --neutralShade4: #babdbf;
+  --neutralShade5: #808488;
+  --neutralShade6: #666a6d;
+  --neutralShade7: #4d5052;
+  --neutralShade8: #212122;
+
+  --borderRadius: 8px;
+  --boxShadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+  font-size: 18px;
+}
+.skip-to-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* Show it when someone uses keyboard navigation (accessibility best practice) */
+.skip-to-link:focus {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1rem;
+  background-color: var(--accentColor);
+  color: var(--neutralShade8);
+  z-index: 999;
+  border-radius: var(--borderRadius);
+  text-decoration: none;
+  box-shadow: var(--boxShadow);
+}
+
+/* General Reset and Layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
+  background: var(--backgroundColor);
+  color: var(--neutralShade8);
+  transition: all 0.3s ease;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
+  border-radius: var(--borderRadius);
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-family: "Lora", serif;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: clamp(2.5rem, 3rem, 3.5rem);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: clamp(1.75rem, 2rem, 2.5rem);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: clamp(1.25rem, 1.5rem, 1.75rem);
+}
+
+p {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Links */
+a {
+  color: var(--neutralShade8);
+  text-decoration: none;
+  border-bottom: 2px dashed transparent;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--neutralShade1);
+  background-color: var(--primaryColor);
+  border-bottom: 2px solid var(--primaryShade5);
+}
+
+/* Navigation */
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  background-color: var(--accentColor);
+}
+
+nav ul li {
+  background-color: var(--accent3Color);
+  padding: 0.5rem 1rem;
+  border-radius: var(--borderRadius);
+}
+
+/* Main Display Section - Cards */
+.section-main-photo-display-pets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  background-color: var(--primaryColor);
+}
+
+.section-main-photo-display-pets a {
+  display: block;
+  max-width: 300px;
+  text-align: center;
+  background-color: var(--secondaryShade2);
+  padding: 1rem;
+  border-radius: var(--borderRadius);
+  box-shadow: var(--boxShadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-main-photo-display-pets a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.section-main-photo-display-pets h2 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* About Section */
+.owner-info-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.owner-info-container img {
+  width: 300px;
+  height: 300px;              /* Force a square shape */
+  border-radius: 50%;         /* Make it a circle */
+  object-fit: cover;          /* Crop the image so it fits nicely */
+  object-position: center;    /* Center the cropped area */
+  margin-bottom: 1rem;
+}
+
+
+/* Individual Pages Styling */
+main {
+  padding: 2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--primaryColor);
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--neutralShade8);
+  border-bottom: none;
+}
+
+footer a:hover {
+  color: var(--accentShade5);
+  background-color: transparent;
+  
+}
+
+/* Responsive */
+@media screen and (min-width: 768px) {
+  .section-main-photo-display-pets {
+    padding: 3rem 5rem;
+  }
+
+  .owner-info-container img {
+    width: 300px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .section-main-photo-display-pets a {
+    max-width: 350px;
+  }
+
+  .owner-info-container img {
+    width: 400px;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
